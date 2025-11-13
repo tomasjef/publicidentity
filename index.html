@@ -1,35 +1,44 @@
+<!-- /index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Public Identity Studio</title>
-  <meta name="description" content="Public Identity Studio" />
+  <title>Public Identity — Holding</title>
   <style>
-    /* Minimal, centered, monospace */
-    :root { --bg: #ffffff; --fg: #0a0a0a; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #0b0b0c; --fg: #f5f5f5; }
-    }
     html, body { height: 100%; }
     body {
       margin: 0;
-      display: grid;
-      place-items: center;
-      background: var(--bg);
-      color: var(--fg);
-      font: 1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-            "Liberation Mono", "Courier New", monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      color: #000;
+      /* why: force regular (not bold), small but legible, system monospace */
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 400;
+      font-style: normal;
+      text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    .wrap { text-align: center; padding: 50px; }
-    .brand { margin: 0; font-size: 16px; letter-spacing: .02em; }
+    .t {
+      max-width: 48ch;
+      padding: 24px;
+      margin: 0 24px;
+      text-align: center;
+      font-weight: 400; /* ensure not bold */
+      font-style: normal;
+    }
+    @media (min-width: 768px) {
+      .t { padding: 32px; margin: 0 32px; }
+    }
   </style>
 </head>
 <body>
-  <main class="wrap" aria-label="Holding page">
-    <h1 class="brand">This is a temporary holding page for Public Identity Studio, a design and creative consultancy.<br>For enquiries contact@publicidentity.studio</h1>
-  </main>
+  <main class="t" aria-label="Holding page">This is a temporary holding page for Public Identity Studio, a design and creative consultancy.<br>For enquiries contact@publicidentity.studio</main>
 </body>
 </html>
